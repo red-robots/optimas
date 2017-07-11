@@ -1,0 +1,157 @@
+* { -webkit-hyphens: none; }
+div {
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+.clear {clear: both;}
+.wrapper {
+	width: 100%;
+	margin: 0px auto;
+	padding: 20px;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 100%;
+		padding: 2%;
+	}
+	@media screen and (min-width: $deskwidth) {
+		width: 96%;
+		padding: 0px;
+	}
+}
+header#masthead {
+	width: 100%;
+	padding: 30px 0;
+	float: left;
+}
+.content-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 66%;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+.widget-area {
+	width: 100%;
+	margin: 0px auto;
+	
+	@media screen and (min-width: $tabwidth) {
+		width: 26%;
+		float: right;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+
+/* Logo */
+.logo , h1.logo {
+	width: 280px;
+	height: 64px;
+	background: {
+		image: url(images/logo.png);
+		size: cover;
+		repeat: no-repeat;
+	}	
+	margin: 10px auto;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 280px;
+		height: 64px;
+		float: left;
+		margin: 0;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+.logo a, h1.logo a {
+	width: 280px;
+	height: 64px;
+	display: block;
+	text-indent: -9000px;
+
+	@media screen and (min-width: $tabwidth) {
+		width: 280px;
+		height: 64px;
+	}
+	@media screen and (min-width: $deskwidth) {
+		/*width: 1200px;*/
+	}
+}
+section.banner {
+	width: 100%;
+	float: left;
+	img {
+		width: 100%;
+	}
+	h2.tagline {
+		width: 60%;
+		margin: 0 0;
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		color: #fff;
+		
+		font-size: 3rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	h2.tagline-home {
+		width: 60%;
+		margin: 0 0;
+		position: absolute;
+		background-color: rgba(0,0,0,.3);
+		top: 50%;
+		left: 20%;
+		color: #fff;
+		font-size: 3rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+section.page-content {
+	width: 100%;
+	float: left;
+	padding: 0 10%;
+	margin: 40px 0;
+}
+footer.site-footer {
+	width: 100%;
+	clear: both;
+	section.one, section.two {
+		color: #fff;
+		padding: 20px 2%;
+		a {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+	section.one {
+		background-color: #333;
+	}
+	section.two {
+		background-color: #000;
+		text-align: center;
+	}
+}
