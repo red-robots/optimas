@@ -4,6 +4,7 @@
 	float: left;
 	width: 100%;
 	text-transform: uppercase;
+	text-align: center;
 	font-family: $font__main;
 
 	@media screen and (min-width: $tabwidth) { 
@@ -58,9 +59,11 @@
 		}
 	}
 	li {
-		float: left;
-		position: relative;
-
+		display: block;
+		@media screen and (min-width: $tabwidth){
+			float: left;
+			position: relative;
+		}
 
 
 		&:hover > a,

@@ -545,7 +545,7 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
  *  Font Awesome 4.5.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */@font-face{font-family:'FontAwesome';src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0");src:url("./fonts/font-awesome/fontawesome-webfont.eot?v=4.5.0#iefix") format("embedded-opentype"),url("./fonts/font-awesome/fontawesome-webfont.woff2?v=4.5.0") format("woff2"),url("./fonts/font-awesome/fontawesome-webfont.woff?v=4.5.0") format("woff"),url("./fonts/font-awesome/fontawesome-webfont.ttf?v=4.5.0") format("truetype"),url("./fonts/font-awesome/fontawesome-webfont.svg?v=4.5.0#fontawesomeregular") format("svg");font-weight:normal;font-style:normal}
-.fa{display:inline-block;font:normal normal normal 14px / 1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-15%}
 .fa-2x{font-size:2em}
 .fa-3x{font-size:3em}
@@ -1266,7 +1266,7 @@ a{color:#0999f3}
 a:hover,a:focus,a:active{color:midnightblue}
 a:focus{outline:thin dotted}
 a:hover,a:active{outline:0}
-.main-navigation{clear:both;display:block;float:left;width:100%;text-transform:uppercase;font-family:"Maven Pro",sans-serif}
+.main-navigation{clear:both;display:block;float:left;width:100%;text-transform:uppercase;text-align:center;font-family:"Maven Pro",sans-serif}
 @media screen and (min-width:600px){.main-navigation{width:auto;display:inline-block;float:right;clear:none}
 }.main-navigation ul{display:none;list-style:none;margin:0;padding-left:0}
 .main-navigation ul ul{box-shadow:0 3px 3px rgba(0,0,0,0.2);float:left;position:absolute;top:1.5em;left:-999em;z-index:99999}
@@ -1274,8 +1274,9 @@ a:hover,a:active{outline:0}
 .main-navigation ul ul li:hover>ul,.main-navigation ul ul li.focus>ul{left:100%}
 .main-navigation ul ul a{width:200px}
 .main-navigation ul li:hover>ul,.main-navigation ul li.focus>ul{left:auto}
-.main-navigation li{float:left;position:relative}
-.main-navigation li:hover>a,.main-navigation li.focus>a{color:#186081}
+.main-navigation li{display:block}
+@media screen and (min-width:600px){.main-navigation li{float:left;position:relative}
+}.main-navigation li:hover>a,.main-navigation li.focus>a{color:#186081}
 .main-navigation li.cta a{border:2px solid rgba(61,127,158,0.9);border-radius:3px}
 .main-navigation li.cta a:hover{border:2px solid #186081;background-color:#186081;color:#fff}
 .main-navigation a{display:block;text-decoration:none;color:rgba(61,127,158,0.9);-webkit-transition:all ease .2s;transition:all ease .2s;padding:10px 20px}
@@ -1389,23 +1390,36 @@ div{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-
 .wrapper{width:100%;margin:0 auto;padding:20px}
 @media screen and (min-width:600px){.wrapper{width:100%;padding:2%}
 }@media screen and (min-width:1200px){.wrapper{width:96%;padding:0}
-}header#masthead{width:100%;padding:30px 0;float:left}
+}header#masthead{width:100%;padding:20px}
+@media screen and (min-width:1200px){header#masthead{position:fixed;top:0;left:0;background-color:rgba(255,255,255,0.9)}
+}header#masthead .wrapper{padding:0}
 .content-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.content-area{width:66%;float:left;margin:0}
 }@media screen and (min-width:1200px){}
 .widget-area{width:100%;margin:0 auto}
 @media screen and (min-width:600px){.widget-area{width:26%;float:right;margin:0}
 }@media screen and (min-width:1200px){}
-.logo,h1.logo{width:280px;height:64px;background-image:url(images/logo.png);background-size:cover;background-repeat:no-repeat;margin:10px auto}
+.logo,h1.logo{width:200px;height:46px;background-image:url(images/logo.png);background-size:cover;background-repeat:no-repeat;margin:10px auto}
 @media screen and (min-width:600px){.logo,h1.logo{width:280px;height:64px;float:left;margin:0}
 }@media screen and (min-width:1200px){}
-.logo a,h1.logo a{width:280px;height:64px;display:block;text-indent:-9000px}
+.logo a,h1.logo a{width:200px;height:46px;display:block;text-indent:-9000px}
 @media screen and (min-width:600px){.logo a,h1.logo a{width:280px;height:64px}
 }@media screen and (min-width:1200px){}
-section.banner{width:100%;float:left}
-section.banner img{width:100%}
-section.banner h2.tagline{width:60%;margin:0;position:absolute;top:50%;left:20%;color:#fff;font-size:3rem;text-align:center;text-transform:uppercase}
-section.banner h2.tagline-home{width:60%;margin:0;position:absolute;background-color:rgba(0,0,0,0.3);top:50%;left:20%;color:#fff;font-size:3rem;text-align:center;text-transform:uppercase}
+section.banner{width:100%;padding:30% 10% 20% 10%;float:left;background-size:cover}
+section.banner h1{margin:0;color:#fff;text-shadow:2px 2px 10px black;font-size:2.2rem;text-align:center;text-transform:uppercase}
+section.banner h2{margin:0;color:#fff;text-shadow:2px 2px 10px black;font-size:2.2rem;text-align:center;text-transform:uppercase}
+section.banner h3{margin:20px 0 0 0;color:#fff;text-shadow:2px 2px 10px black;font-size:1.4rem;text-align:center;text-transform:uppercase}
+section.boxes{width:100%;float:left;padding:0 10%;margin:0 0 40px 0;display:-webkit-box;display:-ms-flexbox;display:-webkit-flex;display:flex;-webkit-justify-content:stretch;-webkit-box-pack:stretch;-ms-flex-pack:stretch;justify-content:stretch;-webkit-align-items:stretch;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;-webkit-align-content:stretch;-ms-flex-line-pack:stretch;align-content:stretch;-webkit-flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+@media screen and (min-width:600px){section.boxes{-webkit-justify-content:space-between;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-direction:row;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+}section.boxes .box{margin:20px 0;width:100%;text-align:center}
+section.boxes .box:first-child{margin:0}
+@media screen and (min-width:600px){section.boxes .box{margin:0;width:31.33333%}
+}section.boxes .box img{width:100%;display:block}
+section.boxes .box header{margin:20px 0 0 0}
+section.boxes .box header h2{margin:0;color:rgba(61,127,158,0.9);font-weight:500}
+section.boxes .box .copy{margin:20px 0 0 0}
+section.boxes .box .link{margin:20px 0 0 0;display:block;text-decoration:none;color:#186081;border:2px solid #186081;border-radius:3px;padding:10px}
+section.boxes .box .link:hover{color:white;background-color:#186081}
 section.page-content{width:100%;float:left;padding:0 10%;margin:40px 0}
 footer.site-footer{width:100%;clear:both}
 footer.site-footer section.one,footer.site-footer section.two{color:#fff;padding:20px 2%}
