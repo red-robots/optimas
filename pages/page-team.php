@@ -46,7 +46,8 @@ if($query->have_posts()):?>
 		<?php endif;?>
 		<?php while($query->have_posts()): $query->the_post();
 			$picture = get_field("picture");
-			$title = get_field("title");?>
+			$title = get_field("title");
+			$link_text = get_field("link_text");?>
 			<div class="member js-blocks">
 				<a class="team-popup-link" href="#<?php echo sanitize_title_with_dashes(preg_replace("/[^a-zA-Z0-9]/","",get_the_title()));?>">
 					<?php if($picture):?>
@@ -57,6 +58,11 @@ if($query->have_posts()):?>
 						<div class="title">
 							<?php echo $title;?>
 						</div><!--.copy-->
+					<?php endif;
+					if($link_text):?>
+						<div class="link">
+							<?php echo $link_text;?>
+						</div><!--.link-->
 					<?php endif;?>
 				</a>
 			</div><!--.member-->

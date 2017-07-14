@@ -22,8 +22,10 @@ $content = get_the_content();
 $image = get_field('banner');
 $tagline = get_field("tagline");
 $headline = get_field("headline");
+$header_link = get_field("header_link");
+$header_link_text = get_field("header_link_text");
 if( !empty($image) ): ?>
-	<section class="banner" <?php if($image):
+	<section class="banner home" <?php if($image):
 		echo 'style="background-image: url('.$image['url'].');"';
 	endif;?>>
 		<?php if($headline):?>
@@ -35,6 +37,13 @@ if( !empty($image) ): ?>
 			<h3>
 				<?php echo $tagline; ?>
 			</h3>
+		<?php endif;?>
+		<?php if($header_link && $header_link_text):?>
+			<div class="button">
+				<a href="<?php echo $header_link;?>">
+					<?php echo $header_link_text;?>
+				</a>
+			</div>
 		<?php endif;?>
 	</section>
 <?php endif;?>
