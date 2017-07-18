@@ -6,6 +6,8 @@
  *
  * @package ACStarter
  */
+wp_redirect(get_the_permalink(18));
+exit;
 
 get_header(); ?>
 

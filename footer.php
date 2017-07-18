@@ -22,15 +22,7 @@ $antiSpam = antispambot($supportEmail);
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		
-	<section class="one">
-		<div class="wrapper">
-			© <?php echo date('Y'); ?> by Optimas 
-		</div>
-	</section>
-	
-	<section class="two">
-		<div class="wrapper">
+		<div class="one">
 			<div class="col-1">
 				<?php if($phone_number):?>
 					<?php echo $phone_number;?>
@@ -46,11 +38,9 @@ $antiSpam = antispambot($supportEmail);
 			</div><!--.col-3-->
 			<div class="clear"></div>
 		</div><!-- wrapper -->
-	</section>
-		
-
-
-	
+		<div class="two">
+			© <?php echo date('Y'); ?> by Optimas 
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

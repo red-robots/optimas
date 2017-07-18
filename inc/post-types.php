@@ -9,17 +9,17 @@ function js_custom_init()
   
      $labels = array(
 	'name' => _x('Team', 'post type general name'),
-    'singular_name' => _x('Team', 'post type singular name'),
-    'add_new' => _x('Add New', 'Team'),
-    'add_new_item' => __('Add New Team'),
-    'edit_item' => __('Edit Teams'),
-    'new_item' => __('New Team'),
-    'view_item' => __('View Teams'),
-    'search_items' => __('Search Teams'),
-    'not_found' =>  __('No Teams found'),
-    'not_found_in_trash' => __('No Teams found in Trash'), 
+    'singular_name' => _x('Team Member', 'post type singular name'),
+    'add_new' => _x('Add New', 'Team Member'),
+    'add_new_item' => __('Add New Team Member'),
+    'edit_item' => __('Edit Team Members'),
+    'new_item' => __('New Team Member'),
+    'view_item' => __('View Team Member'),
+    'search_items' => __('Search Team Members'),
+    'not_found' =>  __('No Team Members found'),
+    'not_found_in_trash' => __('No Team Members found in Trash'), 
     'parent_item_colon' => '',
-    'menu_name' => 'Teams'
+    'menu_name' => 'Team'
   );
   $args = array(
 	'labels' => $labels,
@@ -43,3 +43,22 @@ function js_custom_init()
   // and here
   
   } // close custom post type
+
+    /*##############################################
+Custom Taxonomies     */
+add_action( 'init', 'build_taxonomies', 0 );
+
+function build_taxonomies() {
+// custom tax
+	register_taxonomy( 'team_type', 'team',
+		array(
+			'hierarchical' => true, // true = acts like categories false = acts like tags
+			'label' => 'Team Type',
+			'query_var' => true,
+			'show_admin_column' => true,
+			'public' => true,
+			'rewrite' => array( 'slug' => 'team-type' ),
+			'_builtin' => true
+		) );
+
+} // End build taxonomies

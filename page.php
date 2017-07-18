@@ -15,7 +15,7 @@
 get_header(); 
 
 $image = get_field('banner');
-
+$content = get_the_content();
 ?>
 <section class="banner" <?php if($image):
 		echo 'style="background-image: url('.$image['url'].');"';
@@ -23,26 +23,27 @@ $image = get_field('banner');
 		<h1>
 			<?php the_title(); ?>
 		</h1>
-	</section>
-<section class="page-content">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-
-			<?php
-			while ( have_posts() ) : the_post();
-
-				get_template_part( 'template-parts/content', 'page' );
-
-			endwhile; // End of the loop.
-			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
 </section>
+<?php if($content):?>
+	<section class="page-content">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main" role="main">
+
+				<?php
+				while ( have_posts() ) : the_post();
+
+					get_template_part( 'template-parts/content', 'page' );
+
+				endwhile; // End of the loop.
+				?>
+
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</section>
+<?php endif;?>
 <?php $boxes = get_field("boxes");
 if($boxes):?>
-	<section class="boxes">
+	<section class="boxes <?php if(!$content) echo 'none-above';?>">
 		<?php foreach($boxes as $box):?>
 			<div class="box">
 				<?php if($box['image']):?>

@@ -171,17 +171,55 @@ section.banner {
 		}
 	}
 }
+section.blog {
+	width: 100%;
+	float: left;
+	padding: 0 20px;
+	margin: 0 0 40px 0;
+	&.none-above {
+		margin-top: 40px;
+	}
+	@media screen and (min-width: $tabwidth){
+		padding: 0 10%;
+	}
+	.posts {
+		.post {
+			margin: 20px 0 0 0;
+			&:first-child {
+				margin: 0;
+			}
+			>header {
+				margin: 0 0 20px 0;
+				h2 {
+					margin: 0;
+				}
+			}
+			.copy {
+				.more-link {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.pagi-posts {
+		margin: 20px 0 0 0;
+	}
+}
 section.boxes {
 	width: 100%;
 	float: left;
-	padding: 0 10%;
+	padding: 0 20px;
 	margin: 0 0 40px 0;
 	@include flexbox();
 	@include flexbox-justify(stretch);
 	@include flexbox-align-items(stretch);
 	@include flexbox-align-content(stretch);
 	@include flexbox-direction(column);
+	&.none-above {
+		margin-top: 20px;
+	}
 	@media screen and (min-width: $tabwidth){
+		padding: 0 10%;
 		@include flexbox-justify(space-between);
 		@include flexbox-direction(row);
 	}
@@ -189,6 +227,11 @@ section.boxes {
 		margin: 20px 0;
 		width: 100%;
 		text-align: center;
+		@include flexbox();
+		@include flexbox-justify(stretch);
+		@include flexbox-align-items(stretch);
+		@include flexbox-align-content(stretch);
+		@include flexbox-direction(column);
 		&:first-child {
 			margin: 0;
 		}
@@ -209,11 +252,11 @@ section.boxes {
 			}
 		}
 		.copy {
-			margin: 20px 0 0 0;
+			margin: 20px 0;
 
 		}
 		.link {
-			margin: 20px 0 0 0;
+			margin: auto 0 0 0;
 			display: block;
 			text-decoration: none;
 			color: $color-dark-blue;
@@ -230,10 +273,14 @@ section.boxes {
 section.team {
 	width: 100%;
 	float: left;
-	padding: 0 9.04%;
+	padding: 0 calc(20px - 2%);
 	margin: 0 0 40px 0;
 	@media screen and (min-width: $tabwidth){
-		margin: 0 0 calc(40px - 1%) 0;
+		margin: 0 0 calc(40px - 2%) 0;
+		padding: 0 19.04%;
+	}
+	&.none-above {
+		margin-top: 40px;
 	}
 	>header {
 		margin: 0 0 20px 0;
@@ -246,57 +293,83 @@ section.team {
 			font-weight: 500;
 		}
 	}
-	.member {
-		margin: 20px 0;
-		width: 100%;
-		&:first-child {
+	.team-type {
+		margin: 0 0 20px 0;
+		&:last-child {
 			margin: 0;
 		}
-		@media screen and (min-width: $tabwidth){
-			margin: 0 1% 1% 1%;
-			width: 1/3*94%;
-			float: left;
+		>header {
+			margin: 0 0 20px 0;
+			width: 100%;
+			@media screen and (min-width: $tabwidth){
+				margin: 0 1% 20px 1%;
+			}
+			h3 {
+				margin: 0;
+				font-weight: 500;
+			}
+		}
+		.member {
+			margin: 20px 0;
+			width: 100%;
 			&:first-child {
-				margin: 0 1% 1% 1%;
+				margin: 0;
 			}
-		}
-		a {
-			text-decoration: none;
-			color: inherit;
-			&:hover {
+			@media screen and (min-width: $tabwidth){
+				margin: 0 1% 2% 1%;
+				width: 1/3*94%;
+				float: left;
+				&:first-child {
+					margin: 0 1% 2% 1%;
+				}
+			}
+			a {
+				text-decoration: none;
 				color: inherit;
-			}
-			img {
+				display: block;
 				width: 100%;
-				display: block;
-			}
-			header {
-				margin: 20px 0 0 0;
-				h3 {
-					margin: 0;
-					font-weight: 500;
-				}
-			}
-			.title {
-				margin: 10px 0 0 0;
-			}
-			.link {
-				margin: 20px 0 0 0;
-				display: block;
-				color: $color-dark-blue;
-				text-align: center;
-				border: 2px solid $color-dark-blue;
-				border-radius: 3px;
-				padding: 10px;
+				height: 100%;
+				@include flexbox();
+				@include flexbox-justify(stretch);
+				@include flexbox-align-items(stretch);
+				@include flexbox-align-content(stretch);
+				@include flexbox-direction(column);
 				&:hover {
-					color: white;
-					background-color: $color-dark-blue;
+					color: inherit;
+				}
+				img {
+					width: 100%;
+					display: block;
+				}
+				header {
+					margin: 20px 0 10px 0;
+					h4 {
+						margin: 0;
+						font-weight: 500;
+						font-size: 1.17em;
+					}
+				}
+				.title {
+					margin: 0 0 20px 0;
+				}
+				.link {
+					margin: auto 0 0 0;
+					display: block;
+					color: $color-dark-blue;
+					text-align: center;
+					border: 2px solid $color-dark-blue;
+					border-radius: 3px;
+					padding: 10px;
+					&:hover {
+						color: white;
+						background-color: $color-dark-blue;
+					}
 				}
 			}
 		}
-	}
-	.hidden {
-		display: none;
+		.hidden {
+			display: none;
+		}
 	}
 }
 .team-popup {
@@ -330,8 +403,9 @@ section.team {
 				width: 80%;
 				margin: 20px auto 0 auto;
 			}
-			h3 {
+			h4 {
 				margin: 0;
+				font-size: 1.17em;
 				color: $color-light-blue;
 				font-weight: 500;
 			}
@@ -364,53 +438,62 @@ section.team {
 section.page-content {
 	width: 100%;
 	float: left;
-	padding: 0 10%;
+	padding: 0 20px;
 	margin: 40px 0;
+	@media screen and (min-width: $tabwidth){
+		padding: 0 10%;
+	}
 }
 footer.site-footer {
 	width: 100%;
 	clear: both;
-	section.one, section.two {
+	background-color: #333;
+	color: #fff;
+	a {
 		color: #fff;
-		padding: 20px 2%;
-		a {
-			color: #fff;
-			text-decoration: none;
+		text-decoration: none;
+	}
+	>.one {
+		text-align: center;
+		padding: 20px;
+		@media screen and (min-width: $tabwidth){
+			padding: 20px 2%;
+		}
+		>.col-1 {
+			padding: 0;
+			min-height: 1px;
+			@media screen and (min-width: $tabwidth){
+				float: left;
+				text-align: left;
+				width: 1/3*100%;
+				padding: 0 10px 0 0;
+			}
+		}
+		>.col-2 {
+			padding: 20px 0 0 0;
+			min-height: 1px;
+			@media screen and (min-width: $tabwidth){
+				float: left;
+				width: 1/3*100%;
+				padding: 0 10px;
+			}
+		}
+		>.col-3 {
+			padding: 20px 0 0 0;
+			min-height: 1px;
+			@media screen and (min-width: $tabwidth){
+				float: left;
+				text-align: right;
+				width: 1/3*100%;
+				padding: 0 0 0 10px;
+			}
 		}
 	}
-	section.one {
-		background-color: #333;
-	}
-	section.two {
-		background-color: #000;
+	>.two {
+		padding: 0 20px 20px 20px;
 		text-align: center;
-		>.wrapper {
-			>.col-1 {
-				padding: 0;
-				@media screen and (min-width: $tabwidth){
-					float: left;
-					text-align: left;
-					width: 1/3*100%;
-					padding: 0 10px 0 0;
-				}
-			}
-			>.col-2 {
-				padding: 20px 0 0 0;
-				@media screen and (min-width: $tabwidth){
-					float: left;
-					width: 1/3*100%;
-					padding: 0 10px;
-				}
-			}
-			>.col-3 {
-				padding: 20px 0 0 0;
-				@media screen and (min-width: $tabwidth){
-					float: left;
-					text-align: right;
-					width: 1/3*100%;
-					padding: 0 0 0 10px;
-				}
-			}
+		@media screen and (min-width: $tabwidth){
+			padding: 0 2% 20px 2%;
 		}
 	}
 }

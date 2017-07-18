@@ -6,7 +6,8 @@
  *
  * @package ACStarter
  */
-
+wp_redirect(get_the_permalink(111));
+exit;
 get_header(); ?>
 
 	<div id="primary" class="content-area">

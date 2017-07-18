@@ -47,18 +47,20 @@ if( !empty($image) ): ?>
 		<?php endif;?>
 	</section>
 <?php endif;?>
-<section class="page-content">
-	<div id="primary" class="content-area-full">
-		<main id="main" class="site-main" role="main">
+<?php if($content):?>
+	<section class="page-content">
+		<div id="primary" class="content-area-full">
+			<main id="main" class="site-main" role="main">
 
-			<?php echo $content; ?>
+				<?php the_content(); ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</section>
-<?php $boxes = get_field("boxes");
+			</main><!-- #main -->
+		</div><!-- #primary -->
+	</section>
+<?php endif;
+$boxes = get_field("boxes");
 if($boxes):?>
-	<section class="boxes">
+	<section class="boxes <?php if(!$content) echo 'none-above';?>">
 		<?php foreach($boxes as $box):?>
 			<div class="box">
 				<?php if($box['image']):?>
