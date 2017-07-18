@@ -1441,13 +1441,13 @@ section.boxes .box .link:hover{color:white;background-color:#186081}
 section.team{width:100%;float:left;padding:0 calc(20px - 2%);margin:0 0 40px 0}
 @media screen and (min-width:600px){section.team{margin:0 0 calc(40px - 2%) 0;padding:0 19.04%}
 }section.team.none-above{margin-top:40px}
-section.team>header{margin:0 0 20px 0;width:100%}
-@media screen and (min-width:600px){section.team>header{margin:0 1% 20px 1%}
+section.team>header{padding:0 0 20px 0;width:100%}
+@media screen and (min-width:600px){section.team>header{padding:0 1% 20px 1%}
 }section.team>header h2{margin:0;font-weight:500}
 section.team .team-type{margin:0 0 20px 0}
 section.team .team-type:last-child{margin:0}
-section.team .team-type>header{margin:0 0 20px 0;width:100%}
-@media screen and (min-width:600px){section.team .team-type>header{margin:0 1% 20px 1%}
+section.team .team-type>header{padding:0 0 20px 0;width:100%}
+@media screen and (min-width:600px){section.team .team-type>header{padding:0 1% 20px 1%}
 }section.team .team-type>header h3{margin:0;font-weight:500}
 section.team .team-type .member{margin:20px 0;width:100%}
 section.team .team-type .member:first-child{margin:0}

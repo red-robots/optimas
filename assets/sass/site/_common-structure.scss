@@ -283,10 +283,10 @@ section.team {
 		margin-top: 40px;
 	}
 	>header {
-		margin: 0 0 20px 0;
+		padding: 0 0 20px 0;
 		width: 100%;
 		@media screen and (min-width: $tabwidth){
-			margin: 0 1% 20px 1%;
+			padding: 0 1% 20px 1%;
 		}
 		h2 {
 			margin: 0;
@@ -299,10 +299,10 @@ section.team {
 			margin: 0;
 		}
 		>header {
-			margin: 0 0 20px 0;
+			padding: 0 0 20px 0;
 			width: 100%;
 			@media screen and (min-width: $tabwidth){
-				margin: 0 1% 20px 1%;
+				padding: 0 1% 20px 1%;
 			}
 			h3 {
 				margin: 0;
