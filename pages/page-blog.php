@@ -42,7 +42,10 @@ if ( have_posts() ) : the_post();
 			<div class="posts">
 				<?php while($query->have_posts()): $query->the_post();?>
 					<div class="post">
-						<header><h2><?php the_title();?></h2></header>
+						<header>
+							<h2><?php the_title();?></h2>
+							<h3><?php the_date("M j,Y");?></h3>
+						</header>
 						<div class="copy">
 							<?php the_content('Read More...');?>
 						</div><!--.copy-->
