@@ -94,7 +94,7 @@ if(have_posts()): the_post();
 					$col_3[] = $text_3;
 					$col_3[] = $link_3;?>
 					<div class="row">
-						<div class="col-1">
+						<div class="col-1 js-blocks">
 							<?php if($image_1!==null || $fa_1!==null):?>
 								<div class="col-1">
 									<?php if($image_1!==null):?>
@@ -116,7 +116,7 @@ if(have_posts()): the_post();
 								</div><!--.col-2-->
 							<?php endif;?>
 						</div><!--.col-1-->
-						<div class="col-2">
+						<div class="col-2 js-blocks">
 							<?php if($image_2!==null||$fa_2!==null):?>
 								<div class="col-1">
 									<?php if($image_2!==null):?>
@@ -138,7 +138,7 @@ if(have_posts()): the_post();
 								</div><!--.col-2-->
 							<?php endif;?>
 						</div><!--.col-2-->
-						<div class="col-3">
+						<div class="col-3 js-blocks">
 							<?php if($image_3!==null||$fa_3!==null):?>
 								<div class="col-1">
 									<?php if($image_3!==null):?>
