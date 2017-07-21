@@ -1,0 +1,12 @@
+/* Webfont: CharterITCbyBT-Roman */@font-face {
+    font-family: 'CharterITCBT';
+    src: url('CharterITCbyBT-Roman.eot'); /* IE9 Compat Modes */
+    src: url('CharterITCbyBT-Roman.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('CharterITCbyBT-Roman.woff') format('woff'), /* Modern Browsers */
+         url('CharterITCbyBT-Roman.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('CharterITCbyBT-Roman.svg#CharterITCbyBT-Roman') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

@@ -1,0 +1,12 @@
+/* Webfont: ITCCharter-Italic */@font-face {
+    font-family: 'CharterITCBT';
+    src: url('ITCCharter-Italic.eot'); /* IE9 Compat Modes */
+    src: url('ITCCharter-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('ITCCharter-Italic.woff') format('woff'), /* Modern Browsers */
+         url('ITCCharter-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('ITCCharter-Italic.svg#ITCCharter-Italic') format('svg'); /* Legacy iOS */
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

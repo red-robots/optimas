@@ -26,7 +26,7 @@ function acstarter_scripts() {
 		);
 	wp_enqueue_script( 
 			'font-awesome', 
-			'https://use.fontawesome.com/4945cee666.js', 
+			'https://use.fontawesome.com/8f931eabc1.js', 
 			array('acstarter-custom'), '20170719', 
 			true 
 		);

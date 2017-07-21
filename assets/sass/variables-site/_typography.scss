@@ -1,5 +1,30 @@
-$font__main: 'Maven Pro', sans-serif;
+$font__main: 'ProximaNovaRg', sans-serif;
+$font__heading: 'CharterITCBdBT', sans-serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+/* Webfont: ProximaNova-Regular */@font-face {
+    font-family: 'ProximaNovaRg';
+    src: url('fonts/proxima-nova/proxima-nova-rg/ProximaNova-Regular.eot'); /* IE9 Compat Modes */
+    src: url('fonts/proxima-nova/proxima-nova-rg/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/proxima-nova/proxima-nova-rg/ProximaNova-Regular.woff') format('woff'), /* Modern Browsers */
+         url('fonts/proxima-nova/proxima-nova-rg/ProximaNova-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/proxima-nova/proxima-nova-rg/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+/* Webfont: ITCCharter-Bold */@font-face {
+    font-family: 'CharterITCBdBT';
+    src: url('fonts/proxima-nova/charteritc-bd-bt/ITCCharter-Bold.eot'); /* IE9 Compat Modes */
+    src: url('fonts/proxima-nova/charteritc-bd-bt/ITCCharter-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/proxima-nova/charteritc-bd-bt/ITCCharter-Bold.woff') format('woff'), /* Modern Browsers */
+         url('fonts/proxima-nova/charteritc-bd-bt/ITCCharter-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('fonts/proxima-nova/charteritc-bd-bt/ITCCharter-Bold.svg#ITCCharter-Bold') format('svg'); /* Legacy iOS */
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
