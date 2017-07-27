@@ -55,58 +55,39 @@ if ( have_posts() ) : the_post();
 					);
 					$query = new WP_Query($args);
 					if($query->have_posts()):?>
+						<header><h3><?php echo $term->name;?></h3></header>
 						<div class="team-type">
-							<header><h3><?php echo $term->name;?></h3></header>
 							<?php while($query->have_posts()): $query->the_post();
 								$picture = get_field("picture");
 								$title = get_field("title");
 								$link_text = get_field("link_text");?>
-								<div class="member js-blocks">
-									<a class="team-popup-link" href="#<?php echo sanitize_title_with_dashes(preg_replace("/[^a-zA-Z0-9]/","",get_the_title()));?>">
+								<div class="member clear-bottom">
+									<div class="col-1">
 										<?php if($picture):?>
 											<img src="<?php echo $picture['sizes']['large'];?>" alt="<?php echo $picture['alt'];?>">
 										<?php endif;?>
-											<header><h4><?php echo the_title();?></h4></header>
-										<?php if($title):?>
-											<div class="title">
-												<?php echo $title;?>
-											</div><!--.copy-->
-										<?php endif;
-										if($link_text):?>
-											<div class="link">
-												<?php echo $link_text;?>
-											</div><!--.link-->
-										<?php endif;?>
-									</a>
-								</div><!--.member-->
-								<div class="hidden">
-									<div class="team-popup" id="<?php echo sanitize_title_with_dashes(preg_replace("/[^a-zA-Z0-9]/","",get_the_title()));?>">
-										<div class="col-1">
-											<?php if($picture):?>
-												<img src="<?php echo $picture['sizes']['large'];?>" alt="<?php echo $picture['alt'];?>">
-											<?php endif;?>
-												<header><h4><?php echo the_title();?></h4></header>
-											<?php if($title):?>
-												<div class="title">
-													<?php echo $title;?>
-												</div><!--.copy-->
-											<?php endif;?>
-										</div><!--.col-1-->
-										<div class="col-2">
+									</div><!--.col-1-->
+									<div class="col-2">
+										<header>
+											<h4>	
+												<?php echo the_title();
+												if($title):
+													echo " - ".$title;
+												endif;?>
+											</h4>
+										</header>
+										<div class="copy">
 											<?php the_content();?>
-										</div><!--.col-2-->
-										<div class="clear"></div>
-									</div><!--.team-popup-->
-								</div><!--.hidden-->
+										</div><!--.copy-->
+									</div><!--.col-2-->
+								</div><!--.member-->
 							<?php endwhile;?>
-							<div class="clear"></div>
 						</div><!--.team-type-->
 						<?php wp_reset_postdata();
 					endif;
 				endforeach;
 			endif;?>
 		</section><!--.team-->
-		<?php wp_reset_postdata();
-	endif;
+	<?php endif;
 endif;
 get_footer();
