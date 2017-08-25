@@ -850,8 +850,8 @@ section.team .team-type .member a img{width:100%;display:block}
 @media screen and (min-width:350px){section.team .team-type .member a img{width:80%;margin:0 auto}
 }@media screen and (min-width:600px){section.team .team-type .member a img{margin:0;width:100%}
 }section.team .team-type .member a header{margin:20px 0 10px 0}
-section.team .team-type .member a header h4{margin:0;font-weight:500;font-size:1.17em}
-section.team .team-type .member a .title{margin:0 0 20px 0}
+section.team .team-type .member a header h4{margin:0;font-weight:500;font-size:.9em}
+section.team .team-type .member a .title{margin:0 0 20px 0;font-size:.9em}
 section.team .team-type .member a .link{margin:auto 0 0 0;display:block;color:#186081;text-align:center;border:2px solid #186081;border-radius:3px;padding:10px}
 section.team .team-type .member a .link:hover{color:white;background-color:#186081}
 section.team .team-type .hidden{display:none}
